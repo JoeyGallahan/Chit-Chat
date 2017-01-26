@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+            <!-- This blank layout just takes away the focus from
+                 the edittext box so it's not automatically on it
+                 when you start the app !-->
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:focusableInTouchMode="true"
+                android:focusable="true"></LinearLayout>
+            <Button
+                android:id="@+id/refresh_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/refresh"/>
+            <EditText
+                android:id="@+id/message_box"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:id="@+id/post_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/post"/>
+
+        </LinearLayout>
+        <!-- This empty view holds/shows the divider !-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@drawable/top_divider"
+            android:layerType="software"
+            android:layout_marginTop="10dp"></View>
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/fragment_container">
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
